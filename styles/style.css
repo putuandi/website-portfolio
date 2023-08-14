@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Roboto:wght@400;500;700;900&display=swap');
+
+:root{
+    --primary-color:#000000;
+    --secondary-color: #616161;
+    ;
+    /* Color pallete */
+    --borderColor: #e4e4e4;
+    --servicesColor: #efefef;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorderRadius: 0.7rem;
+    --blueColor: rgb(1, 38, 118);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong{
+    color: var(--primary-color)
+}
+
+p {
+    font-size: 1rem; /* 1rem = 16px */
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--secondary-color);
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main-container .logo-nav{
+    color: var(--blueColor);
+}
+
+@media screen and (max-width: 1200px){
+    .main-container{
+        width: 90%;
+    }
+}
+
+/* Logo dan Navigation Menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.logo a{
+    color: var(--primary-color);
+}
+
+nav ul li{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+/* button */
+.btn{
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1.5px solid var(--borderColor);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    font-size: 18px;
+}
+
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* burger */
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: #000000;
+    margin: 7px;
+    transition: all .3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* hero section */
+#hero{
+    height: 600px;
+    display: grid;;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.hero-name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: .5rem 0 1rem;
+}
+
+.hero-name span{
+    color: rgb(1, 38, 118);
+}
+
+.hero-left img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.hero-left{
+    display: flex;
+    justify-content: center;
+}
+
+/* titles */
+.section-title{
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--secondary-color);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.pre-title::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--secondary-color);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+
+/* Services Section */
+#services {
+    background-color: var(--servicesColor);
+    padding: var(--sectionPadding);
+}
+
+.services .pre-title{
+    margin: 0 auto;
+}
+
+.services-title{
+    text-align: center;
+}
+
+.service {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: white;
+    border-radius: var(--itemBorderRadius);
+}
+
+.service h4{
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.service-icon{
+    background: var(--servicesColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.service-icon svg{
+    fill: var(--blueColor);
+}
+
+/* layout */
+.grid-3{
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 3rem;
+}
+
+/* project-section */
+#projects{
+    padding: var(--sectionPadding);
+}
+
+.project {
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--borderColor);
+}
+
+.project-cover{
+    height: 250px;   
+}
+
+.project-cover img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info{
+    padding: 2rem 1.5rem;
+}
+
+.project-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project h4{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.project a svg:hover{
+    fill: var(--blueColor);
+}
+
+.project a svg{
+    transition: .2s ease-in-out;
+}
+
+.project-tags{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.project-tags div{
+    font-size: .9rem;
+    border: 1px solid var(--borderColor);
+    padding: .4rem 1rem;
+    color: #605d5d;
+}
+
+/* contact */
+#contact{
+    padding: var(--sectionPadding);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div{
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    padding: .75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: #f1f1f1;
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+    color: #9d9fa1;
+}
+
+.contact-form input:focus, .contact-form textarea:focus{
+    outline:none;
+    border: 1px solid #7d7d7d;
+}
+
+.btn-submit{
+    width: 100%;
+    padding: .75rem 1.3rem;
+    background-color: var(--blueColor);
+    color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn-submit:hover{
+    background: #0c027d;
+}
+
+.contact-item{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-item-icon{
+    background: #f1f1f1;
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg{
+    fill: var(--blueColor  );
+}
+
+.contact-item-detail h4{
+    margin-bottom: 0.4rem;
+}
+
+/* footer */
+footer{
+   padding: 4rem 0; 
+   background: var(--servicesColor);
+   text-align: center;
+}
+
+.footer-icons{
+    margin-bottom: 1rem;
+}
+
+.footer-icons a{
+    margin: 0 .5rem;
+}
+
+.footer-icons svg{
+    fill: #3e3f40;
+}
+
+.footer-icons svg:hover{
+    fill: #000000;
+}
